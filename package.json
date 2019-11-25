@@ -1,0 +1,27 @@
+{
+  "name": "koa_nodejs_mousetracker",
+  "version": "1.0.0",
+  "description": "Mause Tracker ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon"
+  },
+  "author": "Daniel Mroz",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^12.12.12",
+    "nodemon": "^2.0.1",
+    "typescript": "^3.7.2"
+  },
+  "dependencies": {
+    "class-validator": "^0.11.0",
+    "koa": "^2.11.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "pg": "^7.12.1",
+    "ts-node": "^8.5.0",
+    "tsconfig-paths": "^3.9.0",
+    "typeorm": "^0.2.20"
+  }
+}
