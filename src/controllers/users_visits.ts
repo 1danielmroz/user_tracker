@@ -47,6 +47,7 @@ export default class Users_Visits_Controller {
         console.log(ctx.request.body)
         userToBeSaved.browser = ctx.request.body.browser;
         userToBeSaved.domain = ctx.request.body.domain;
+        userToBeSaved.domain_url = ctx.request.body.domainurl;
         userToBeSaved.height = ctx.request.body.height;
         userToBeSaved.width = ctx.request.body.width;
         userToBeSaved.userIP = ctx.request.body.userIP;
@@ -106,6 +107,7 @@ public static async updateUser (ctx: BaseContext) {
     if(ctx.request.body.domain) {userToBeUpdated.domain = ctx.request.body.domain;}
     if(ctx.request.body.height) {userToBeUpdated.height = ctx.request.body.height;}
     if(ctx.request.body.width) {userToBeUpdated.width = ctx.request.body.width;}
+    if(ctx.request.body.domain_url) {userToBeUpdated.domain_url = ctx.request.body.domainurl;}
     if(ctx.request.body.userIP) {userToBeUpdated.userIP = ctx.request.body.userIP;}
     if(ctx.request.body.is_mobile) {userToBeUpdated.is_mobile = ctx.request.body.is_mobile;}
     if(ctx.request.body.log_time) {userToBeUpdated.log_time = ctx.request.body.log_time;}

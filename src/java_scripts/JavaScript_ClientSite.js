@@ -4,6 +4,7 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
 src="https://api.ipify.org?format=jsonp&callback=getIP" //ip location JavaScript
 
 
+var userConsent=true;
 //Varibels
 var browser;  //+
 var domain_Url; //+
@@ -47,18 +48,20 @@ $.getJSON('https://api.ipify.org?format=json', function(data){
      to_send ['log_time_raw']=startTime;
      to_send ['leave_time']=startTime;
      to_send ['leave_time_raw']=finishTime;
+     if(userConsent){
      sendAjaxData(to_send);//sending the position
+      }
    }
 
   }); //End of document ready
 
 
   function sendAjaxData(json_data){
-      var url='http://localhost:3000/';
+      var url='http://localhost:3000/users_visits';
       var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance
       console.log(json_data);
       xmlhttp.open("POST", url);
-      xmlhttp.setRequestHeader("Content-Type", "application/json");
+      xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
       xmlhttp.send(JSON.stringify(json_data));//Send Json Mouse Position
       mousePosition=[];//clear mouse Position
     }

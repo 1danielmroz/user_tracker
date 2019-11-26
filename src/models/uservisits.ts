@@ -22,6 +22,9 @@ export class Users_Visits{
     //domain
     @Column()
     domain: string;
+    //Url
+    @Column()
+    domain_url: string;
     //Height
     @Column({
       length:100
@@ -46,7 +49,7 @@ export class Users_Visits{
       length:100
     })
     log_time: string;
-    
+
     @Column({
       length:100
     })
